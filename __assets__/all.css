@@ -1,0 +1,91 @@
+/* styles:app/client.imba */
+:root {
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  width: 100%;
+  margin: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+input {
+  font-family: "Open Sans", sans-serif;
+  width: 90%;
+  margin: 10px;
+  text-align: center;
+  border-style: none;
+  font-size: 30px;
+  background: none;
+  text-transform: uppercase;
+  color: hsla(0, 0.00%, 0.00%, 1);
+}
+h1 {
+  font-size: 30px;
+}
+input::placeholder {
+  color: hsla(0, 0.00%, 0.00%, 1);
+}
+h1,
+h2,
+p {
+  margin: 0rem;
+}
+.e-af:not(#_):not(#_):not(#_) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.e-ak:not(#_):not(#_):not(#_) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+.container.e_ak:not(#_) {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+}
+.container.e_ak h1.e_ak:not(#_) {
+  text-align: center;
+}
+.container.e_ak div.e_ak:not(#_) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.e_ak:not(#_) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+}
+.e-aq:not(#_):not(#_):not(#_) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+.e-at:not(#_):not(#_):not(#_) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+app-e-bc {
+  display: block;
+}
+/* chunk:end */
