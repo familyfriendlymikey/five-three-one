@@ -33,11 +33,14 @@ tag app
 				total-weight * (1 + (0.0333 * reps))
 		estimate
 
+	get tm
+		orm * .9
+
 	def round-weight weight
 		Math.round(weight / lcd) * lcd
 
-	def get-weight percentage
-		Math.max 0, round-weight((((orm * .9) * percentage) - bar) / 2)
+	def to-plate weight
+		Math.max 0, round-weight((weight - bar) / 2)
 
 	def cell percentage, reps
 		<div>
@@ -46,7 +49,7 @@ tag app
 			<div>
 				<div>
 					css fs:1fs
-					get-weight percentage
+					to-plate tm * percentage
 				<div>
 					css fs:12px
 					reps
@@ -107,20 +110,26 @@ tag app
 				cell 0.85, "x3"
 				cell 0.95, "x1+"
 
+			<%title> "week 4"
+			<.row>
+				cell 0.4, "x5"
+				cell 0.5, "x5"
+				cell 0.6, "x5"
+
 			<%title> "info"
 			<div>
 				css d:hcs w:100%
 
 				<div>
 					<div> "1RM: {orm.toFixed(2)}"
-					<div> "1RM plate: {((orm - bar) / 2).toFixed(2)}"
+					<div> "1RM plate: {to-plate(orm)}"
 
 				<div>
-					<div> "90%: {(orm * .9).toFixed(2)}"
-					<div> "90% plate: {(((orm * .9) - bar) / 2).toFixed(2)}"
+					<div> "TM: {tm.toFixed(2)}"
+					<div> "TM plate: {to-plate(tm)}"
 
 				<div>
-					<div> "85.5%: {(orm * .9 * .95).toFixed(2)}"
-					<div> "85.5% plate: {(((orm * .9 * .95) - bar) / 2).toFixed(2)}"
+					<div> "PR: {(tm * .95).toFixed(2)}"
+					<div> "PR plate: {to-plate(tm * .95)}"
 
 imba.mount <app>
